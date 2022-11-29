@@ -1,0 +1,11 @@
+<div class="container login">
+
+    <p>¡Bienvenido!</p>
+    
+    <input type="email" id="correo" placeholder="Correo Electrónico" #correo /> <br><br>
+
+    <button (click)="obtenerUsuario(correo.value)" type="button" class="btn btn-primary">Ingresar</button> <br><br>
+
+    <p>{{mensaje_de_error}}</p>
+
+</div>

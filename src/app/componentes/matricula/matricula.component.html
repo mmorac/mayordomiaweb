@@ -1,0 +1,86 @@
+<div class="container">
+    <div class="card-body">
+        <div class="form-group form-inline text-left pregunta">
+            <label class="mr-4" for="title">Apellidos</label>
+            <input type="text" class="form-control col-6" #apellidos>
+        </div>
+        <div class="form-group form-inline text-left pregunta">
+            <label class="mr-4" for="title">Nombre</label>
+            <input type="text" class="form-control col-6" #nombre>
+        </div>
+        <div class="form-group form-inline text-left pregunta">
+            <label class="mr-4" for="title">Rango de edad</label>
+            <select class="form-select" #rango_edad>
+                <option disabled selected>Elija su rango de edad</option>
+                <option>18-24</option>
+                <option>25-34</option>
+                <option>35-55</option>
+                <option>55 o más</option>
+            </select>
+        </div>
+        <div class="form-group form-inline text-left pregunta">
+            <label class="mr-4" for="title">Estado Civil</label>
+            <select class="form-select" #estado_civil>
+                <option disabled selected>Elija su estado civil</option>
+                <option>Soltero(a)</option>
+                <option>Casado(a)</option>
+                <option>En unión libre</option>
+                <option>Divorciado(a)</option>
+                <option>Viudo(a)</option>
+            </select>
+        </div>
+        <div class="form-group form-inline text-left pregunta">
+            <label class="mr-4" for="title">Telefono</label>
+            <input type="number" class="form-control col-6" #telefono>
+        </div>
+        <div class="form-group form-inline text-left pregunta">
+            <label class="mr-4" for="title">Correo Electrónico</label>
+            <input type="text" class="form-control col-6" #correo>
+        </div>
+        <div class="form-group form-inline text-left pregunta">
+            <label class="mr-4" for="title">¿Le interesa recibir este curso de manera presencial o virtual?</label>
+            <select class="form-select" #modalidad>
+                <option disabled selected>Elija la modalidad</option>
+                <option>Presencial</option>
+                <option>Virtual</option>
+            </select>
+        </div>
+        <div class="form-group form-inline text-left pregunta">
+            <label class="mr-4" for="title">Confirmo que voy a dedicar el tiempo indicado al inicio del formulario, así como completar las 12 clases.</label>
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked #compromiso_curso>
+        </div>
+        <div class="form-group form-inline text-left pregunta">
+            <label class="mr-4" for="title">Necesito apoyo para obtener una beca para adquirir los libros.</label>
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked #necesita_beca>
+        </div>
+        <div class="form-group form-inline text-left pregunta">
+            <label class="mr-4" for="title">Confirmo que voy a comprometerme para cumplir todos los requerimientos necesarios para obtener esta beca.</label>
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked #compromiso_beca>
+        </div>
+        <div class="form-group form-inline text-left pregunta">
+            <label class="mr-4" for="title">¿Usted se congrega o participa en Vida Abundante Norte Cariari?</label>
+            <input (click)="especificar_iglesia = !especificar_iglesia" class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked #vanc>
+        </div>
+        <div *ngIf="especificar_iglesia" class="form-group form-inline text-left pregunta">
+            <label class="mr-4" for="title">Escriba el nombre de la Iglesia a la que asiste:</label>
+            <input type="text" class="form-control col-6" #otra_iglesia>
+        </div>
+        <div class="form-group form-inline text-left pregunta">
+            <label class="mr-4" for="title">¿Forma parte de algún ministerio en Vida Abundante Norte Cariari?</label>
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked #servidor_vanc>
+        </div>
+        <div class="form-group form-inline text-left pregunta">
+            <label class="mr-4" for="title">Escriba el nombre del ministerio-VANC en el que sirve</label>
+            <input type="text" class="form-control col-6" #ministerio_vanc>
+        </div>
+        <div class="form-group form-inline text-left pregunta">
+            <label class="mr-4" for="title">¿Cómo se dio cuenta de este curso?</label>
+            <input type="text" class="form-control col-6" #fuente_mtf>
+        </div>
+        <div class="form-group form-inline text-left pregunta">
+            <label class="mr-4" for="title">Puede brindarnos sus comentarios o consultas para tomar en cuenta:</label>
+            <input type="text" class="form-control col-6" #comentarios>
+        </div>
+        <button class="btn btn-block btn-primary">Enviar</button>
+    </div>
+</div>
