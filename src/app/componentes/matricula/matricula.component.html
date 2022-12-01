@@ -46,6 +46,17 @@
             </select>
         </div>
         <div class="form-group form-inline text-left pregunta">
+            <label class="mr-4" for="title">Seleccione la opción que puede ajustarse a su disponibilidad.</label>
+            <select class="form-select" #disponibilidad>
+                <option disabled selected>Elija los días</option>
+                <option>Lunes</option>
+                <option>Martes</option>
+                <option>Miércoles</option>
+                <option>Jueves</option>
+                <option>Viernes</option>
+            </select>
+        </div>
+        <div class="form-group form-inline text-left pregunta">
             <label class="mr-4" for="title">Confirmo que voy a dedicar el tiempo indicado al inicio del formulario, así como completar las 12 clases.</label>
             <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked #compromiso_curso>
         </div>
@@ -61,7 +72,7 @@
             <label class="mr-4" for="title">¿Usted se congrega o participa en Vida Abundante Norte Cariari?</label>
             <input (click)="especificar_iglesia = !especificar_iglesia" class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked #vanc>
         </div>
-        <div *ngIf="especificar_iglesia" class="form-group form-inline text-left pregunta">
+        <div class="form-group form-inline text-left pregunta">
             <label class="mr-4" for="title">Escriba el nombre de la Iglesia a la que asiste:</label>
             <input type="text" class="form-control col-6" #otra_iglesia>
         </div>
@@ -81,6 +92,9 @@
             <label class="mr-4" for="title">Puede brindarnos sus comentarios o consultas para tomar en cuenta:</label>
             <input type="text" class="form-control col-6" #comentarios>
         </div>
-        <button class="btn btn-block btn-primary">Enviar</button>
+        <button class="btn btn-block btn-primary" (click)="matricular(apellidos.value, nombre.value, rango_edad.value,
+        estado_civil.value, telefono.value, correo.value, disponibilidad.value, modalidad.value, compromiso_curso.checked, necesita_beca.checked,
+        compromiso_beca.checked, vanc.checked, otra_iglesia.value, servidor_vanc.checked, ministerio_vanc.value, fuente_mtf.value,
+        comentarios.value)">Enviar</button>
     </div>
 </div>

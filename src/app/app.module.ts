@@ -7,6 +7,8 @@ import { NavbarComponent } from './componentes/navbar/navbar.component';
 import { InicioComponent } from './componentes/inicio/inicio.component';
 import { DevocionalesComponent } from './componentes/devocionales/devocionales.component';
 import { MatriculaComponent } from './componentes/matricula/matricula.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ListadoalumnosComponent } from './componentes/listadoalumnos/listadoalumnos.component';
 
 @NgModule({
   declarations: [
@@ -14,11 +16,13 @@ import { MatriculaComponent } from './componentes/matricula/matricula.component'
     NavbarComponent,
     InicioComponent,
     DevocionalesComponent,
-    MatriculaComponent
+    MatriculaComponent,
+    ListadoalumnosComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

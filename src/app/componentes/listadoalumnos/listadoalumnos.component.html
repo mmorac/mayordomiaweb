@@ -1,0 +1,32 @@
+<div class="container">
+    <table>
+        <tr>
+            <th class="campoalumno">
+                ID Alumno
+            </th>
+            <th class="campoalumno">
+                Nombre Completo
+            </th>
+            <th class="campoalumno">
+                Correo Electrónico
+            </th>
+            <th class="campoalumno">
+                Grupo
+            </th>
+        </tr>
+        <tr *ngFor="let alumno of alumnos">
+            <td class="campoalumno">
+                {{alumno.id}}
+            </td>
+            <td class="campoalumno">
+                {{alumno.nombre}} {{alumno.apellidos}}
+            </td>
+            <td class="campoalumno">
+                {{alumno.correo}}
+            </td>
+            <td class="campoalumno">
+                {{alumno.grupo}}
+            </td>
+        </tr>
+    </table>
+</div>
