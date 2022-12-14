@@ -25,7 +25,16 @@
                 {{alumno.correo}}
             </td>
             <td class="campoalumno">
-                {{alumno.grupo}}
+                <select name="" id="">
+                    <option *ngFor="let grupo of grupos" value="{{grupo.id}}">
+                        Grupo {{grupo.id}} - {{grupo.dia}} {{grupo.hora}}
+                    </option>
+                </select>
+            </td>
+            <td class="campoalumno">
+                <button type="button" class="btn btn-success">
+                    Actualizar
+                </button>
             </td>
         </tr>
     </table>

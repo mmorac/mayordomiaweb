@@ -45,7 +45,6 @@ export class MatriculaComponent implements OnInit {
       "comentarios": comentarios,
       "grupo": ""
     }
-    console.log("prueba");
     this.servicioAlumnos.postAlumno(alumno, "").subscribe();
   }
 }
